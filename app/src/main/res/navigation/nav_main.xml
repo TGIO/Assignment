@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/profilesFragment">
+
+    <fragment
+        android:id="@+id/profilesFragment"
+        android:label="Profiles List"
+        android:name="com.github.tgio.assignment.ui.list.ProfilesFragment"
+        tools:layout="@layout/fragment_profiles" />
+
+    <fragment
+        android:id="@+id/profileDetailsFragment"
+        android:label="Profile Details"
+        android:name="com.github.tgio.assignment.ui.details.ProfileDetailsFragment"
+        tools:layout="@layout/fragment_profile_details">
+        <argument
+            android:name="profileId"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+</navigation>
